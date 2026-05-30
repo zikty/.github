@@ -1,0 +1,11 @@
+name: a11y scan
+on:
+  pull_request:
+    types: [labeled]
+  workflow_dispatch:
+
+jobs:
+  a11y:
+    if: github.event_name == 'workflow_dispatch' || github.event.label.name == 'a11y-scan'
+    uses: zikty/zikty-ops/.github/workflows/reusable-a11y-scan.yml@main
+    secrets: inherit

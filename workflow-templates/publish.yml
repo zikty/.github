@@ -1,0 +1,11 @@
+name: publish
+on:
+  push:
+    branches: [main, develop]
+    tags: ['v*']
+  workflow_dispatch:
+
+jobs:
+  publish:
+    uses: zikty/zikty-ops/.github/workflows/reusable-publish.yml@main
+    secrets: inherit

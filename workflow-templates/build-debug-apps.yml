@@ -1,0 +1,11 @@
+name: build debug apps
+on:
+  pull_request:
+    types: [labeled]
+  workflow_dispatch:
+
+jobs:
+  build:
+    if: github.event_name == 'workflow_dispatch' || github.event.label.name == 'build-debug-apps'
+    uses: zikty/zikty-ops/.github/workflows/reusable-build-debug-apps.yml@main
+    secrets: inherit

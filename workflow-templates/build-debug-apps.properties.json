@@ -1,0 +1,6 @@
+{
+  "name": "zikty · build debug apps",
+  "description": "Build debug APKs (assembleDebug + artifacts), on the build-debug-apps label or on demand. Logic lives in zikty-ops.",
+  "iconName": "octicon-package",
+  "categories": ["Android"]
+}
