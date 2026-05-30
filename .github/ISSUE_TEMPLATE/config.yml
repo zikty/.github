@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question / support
+    url: https://github.com/zikty/zikty-ops/discussions
+    about: For questions and general help (don't file a bug).
+  - name: Security report
+    url: https://github.com/zikty/.github/security/policy
+    about: Report vulnerabilities privately — never as a public issue.
