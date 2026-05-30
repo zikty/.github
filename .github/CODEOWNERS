@@ -1,0 +1,4 @@
+# MANAGED BY zikty-ops — change in repo-files/_all/.github/CODEOWNERS and re-run sync-repo-files.sh
+# CODEOWNERS is NOT inherited from the .github repo, so it's distributed per repo.
+# Default owner for everything. Add path-specific owners below as teams grow.
+* @zikty
