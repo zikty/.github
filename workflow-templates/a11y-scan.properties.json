@@ -1,0 +1,6 @@
+{
+  "name": "zikty · a11y scan",
+  "description": "Android ATF accessibility scan on an emulator, results published to the PR. Gated on the a11y-scan label. Logic lives in zikty-ops.",
+  "iconName": "octicon-accessibility-inset",
+  "categories": ["Android", "Code Quality"]
+}

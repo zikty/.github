@@ -1,0 +1,6 @@
+{
+  "name": "zikty · version bump",
+  "description": "Bump the base version (gradle/libs.versions.toml key or gradle.properties VERSION_NAME) via a manual patch/minor/major dispatch. Logic lives in zikty-ops.",
+  "iconName": "octicon-versions",
+  "categories": ["Release"]
+}

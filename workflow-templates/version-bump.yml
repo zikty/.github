@@ -1,0 +1,16 @@
+name: version bump
+on:
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: patch | minor | major
+        type: choice
+        options: [patch, minor, major]
+        default: patch
+
+jobs:
+  bump:
+    uses: zikty/zikty-ops/.github/workflows/reusable-version-bump.yml@main
+    with:
+      bump: ${{ inputs.bump }}
+    secrets: inherit

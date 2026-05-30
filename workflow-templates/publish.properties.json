@@ -1,0 +1,6 @@
+{
+  "name": "zikty · publish (GitHub Packages)",
+  "description": "Publish artifacts to GitHub Packages with channels: develop→SNAPSHOT, main→RC, tag→release. Logic lives in zikty-ops.",
+  "iconName": "octicon-package-dependents",
+  "categories": ["Release"]
+}

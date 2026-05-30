@@ -1,0 +1,26 @@
+name: release
+on:
+  pull_request:
+    types: [labeled, closed]
+    branches: [main]
+
+jobs:
+  # Label a develop->main PR `release-candidate` to run the gate and cut an RC.
+  gate:
+    if: github.event.action == 'labeled' && github.event.label.name == 'release-candidate'
+    uses: zikty/zikty-ops/.github/workflows/reusable-release-gate.yml@main
+    secrets: inherit
+  rc:
+    needs: gate
+    if: github.event.action == 'labeled' && needs.gate.outputs.can_release == 'true'
+    uses: zikty/zikty-ops/.github/workflows/reusable-release.yml@main
+    with:
+      prerelease: true
+    secrets: inherit
+  # Merging that PR promotes the RC to the final tag.
+  final:
+    if: github.event.action == 'closed' && github.event.pull_request.merged == true && contains(github.event.pull_request.labels.*.name, 'release-candidate')
+    uses: zikty/zikty-ops/.github/workflows/reusable-release.yml@main
+    with:
+      prerelease: false
+    secrets: inherit
