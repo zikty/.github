@@ -5,6 +5,12 @@ on:
     tags: ['v*']
   workflow_dispatch:
 
+# The repo's default GITHUB_TOKEN is read-only and a reusable can't exceed its
+# caller's permissions — declare them here or the reusable fails at startup.
+permissions:
+  contents: read
+  packages: write
+
 jobs:
   publish:
     uses: zikty/zikty-ops/.github/workflows/reusable-publish.yml@main

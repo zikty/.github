@@ -8,6 +8,11 @@ on:
         options: [patch, minor, major]
         default: patch
 
+# The repo's default GITHUB_TOKEN is read-only and a reusable can't exceed its
+# caller's permissions — declare them here or the reusable fails at startup.
+permissions:
+  contents: write
+
 jobs:
   bump:
     uses: zikty/zikty-ops/.github/workflows/reusable-version-bump.yml@main

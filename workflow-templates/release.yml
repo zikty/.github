@@ -4,6 +4,12 @@ on:
     types: [labeled, closed]
     branches: [main]
 
+# The repo's default GITHUB_TOKEN is read-only and a reusable can't exceed its
+# caller's permissions — declare them here or the reusable fails at startup.
+# contents: write covers tagging + GitHub Release creation in reusable-release.
+permissions:
+  contents: write
+
 jobs:
   # Label a develop->main PR `release-candidate` to run the gate and cut an RC.
   gate:
