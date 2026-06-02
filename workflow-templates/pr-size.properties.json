@@ -1,0 +1,6 @@
+{
+  "name": "PR size labeler (zikty-ops)",
+  "description": "Label PRs size: XS/S/M/L/XL by lines changed (lockfiles/binaries excluded) so review effort is visible and XL PRs stand out.",
+  "iconName": "diff",
+  "categories": ["Automation", "Android", "Kotlin"]
+}
