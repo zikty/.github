@@ -1,0 +1,6 @@
+{
+  "name": "PR title lint (zikty-ops)",
+  "description": "Validate the PR title against Conventional Commits. The title becomes the squash-commit subject and drives the labeler, version bump and changelog.",
+  "iconName": "check-circle",
+  "categories": ["Automation", "Android", "Kotlin"]
+}
