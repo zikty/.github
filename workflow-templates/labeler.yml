@@ -1,0 +1,14 @@
+name: Labeler
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+# Reusable can't exceed caller perms; the repo default token is read-only.
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  label:
+    uses: zikty/zikty-ops/.github/workflows/reusable-labeler.yml@v1
+    secrets: inherit
