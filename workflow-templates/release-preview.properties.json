@@ -1,0 +1,6 @@
+{
+  "name": "zikty · release preview",
+  "description": "On a develop→main PR labeled release-candidate, comment the next version, what's going in (changelog since last tag), and a merge-commit reminder. Logic in zikty-ops.",
+  "iconName": "octicon-eye",
+  "categories": ["Release"]
+}
