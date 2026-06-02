@@ -1,0 +1,6 @@
+{
+  "name": "Auto-labeler (zikty-ops)",
+  "description": "Auto-apply type:/area:/breaking-change labels from the PR title (conventional commits) and changed paths. Feeds the release version bump and changelog.",
+  "iconName": "tag",
+  "categories": ["Automation", "Android", "Kotlin"]
+}
