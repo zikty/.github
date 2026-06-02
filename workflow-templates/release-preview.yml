@@ -1,0 +1,17 @@
+name: release preview
+on:
+  pull_request:
+    types: [opened, reopened, labeled, synchronize]
+    branches: [main]
+
+# The reusable needs to comment on the PR; the repo's default token is read-only,
+# so grant write here (a reusable can't exceed its caller's permissions).
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  preview:
+    if: contains(github.event.pull_request.labels.*.name, 'release-candidate')
+    uses: zikty/zikty-ops/.github/workflows/reusable-release-preview.yml@main
+    secrets: inherit
