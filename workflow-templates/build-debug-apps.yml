@@ -4,6 +4,11 @@ on:
     types: [labeled]
   workflow_dispatch:
 
+# The repo's default GITHUB_TOKEN is read-only and a reusable can't exceed its
+# caller's permissions — declare them here or the reusable fails at startup.
+permissions:
+  contents: read
+
 jobs:
   build:
     if: github.event_name == 'workflow_dispatch' || github.event.label.name == 'build-debug-apps'
