@@ -13,5 +13,5 @@ permissions:
 
 jobs:
   publish:
-    uses: zikty/zikty-ops/.github/workflows/reusable-publish.yml@main
+    uses: zikty/zikty-ops/.github/workflows/reusable-publish.yml@v1
     secrets: inherit

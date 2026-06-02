@@ -12,5 +12,5 @@ permissions:
 jobs:
   build:
     if: github.event_name == 'workflow_dispatch' || github.event.label.name == 'build-debug-apps'
-    uses: zikty/zikty-ops/.github/workflows/reusable-build-debug-apps.yml@main
+    uses: zikty/zikty-ops/.github/workflows/reusable-build-debug-apps.yml@v1
     secrets: inherit

@@ -14,5 +14,5 @@ permissions:
 jobs:
   a11y:
     if: github.event_name == 'workflow_dispatch' || github.event.label.name == 'a11y-scan'
-    uses: zikty/zikty-ops/.github/workflows/reusable-a11y-scan.yml@main
+    uses: zikty/zikty-ops/.github/workflows/reusable-a11y-scan.yml@v1
     secrets: inherit
