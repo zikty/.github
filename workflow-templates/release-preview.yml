@@ -13,5 +13,5 @@ permissions:
 jobs:
   preview:
     if: contains(github.event.pull_request.labels.*.name, 'release-candidate')
-    uses: zikty/zikty-ops/.github/workflows/reusable-release-preview.yml@main
+    uses: zikty/zikty-ops/.github/workflows/reusable-release-preview.yml@v1
     secrets: inherit

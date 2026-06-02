@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   bump:
-    uses: zikty/zikty-ops/.github/workflows/reusable-version-bump.yml@main
+    uses: zikty/zikty-ops/.github/workflows/reusable-version-bump.yml@v1
     with:
       bump: ${{ inputs.bump }}
     secrets: inherit
